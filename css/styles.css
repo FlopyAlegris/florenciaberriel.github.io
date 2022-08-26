@@ -29,7 +29,7 @@ nav a {
 }
 
 .jumbotron {
-  height: 50vh;
+  height: 40vh;
   padding: 5em inherit;
   margin-bottom: 0;
   background-color: #53C0FB;
@@ -187,4 +187,12 @@ a.custom-card:hover {
 
 .checked {
   color: orange;
+}
+
+/* Aqui pongo el estilo de el h4 y el h2 de productos*/
+
+.titulo-productos {
+  text-align: center;
+  margin: 1rem auto 1rem;
+  
 }
