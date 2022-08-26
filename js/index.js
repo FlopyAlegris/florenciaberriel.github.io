@@ -20,7 +20,10 @@ function desconectarse(){
 
 //esta funcion validarUsuario la cree para poder ver si el usuario pudo loguearse con exito e impedir que entre sin hacerlo
 
+<<<<<<< HEAD
 //onload atributo
+=======
+>>>>>>> a68ec1aca3b838510fa6c9be4b8bf51bb7d037fd
 function validarUsuario() {
     if(localStorage.getItem('USER')){ //verifica si el USER existe
     
@@ -32,6 +35,10 @@ function validarUsuario() {
     window.location.href = "login.html"; 
     alert('Debe logearse correctamente'); //esto impide que el cliente navegue por el index sin pasar por el login previamente (y lo redirige)
 }
+<<<<<<< HEAD
 document.getElementById("muestra-usuario").innerHTML = localStorage.getItem("usuario"); 
 }//ENTREGA2 linea 34 selecciona con el getElement el elemento con id "muestra-usuario" y con el inner muestra el localStorage en pantalla(html)
 
+=======
+}
+>>>>>>> a68ec1aca3b838510fa6c9be4b8bf51bb7d037fd
