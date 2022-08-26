@@ -9,21 +9,26 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link href="css/style_login.css" rel="stylesheet">
   <style>
     body {
       background-color: rgb(248, 249, 250);
     }
   </style>
+  
 </head>
 
-<body>
-  <main class="mt-5">
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
-    </div>
-  </main>
+<body>  
+  <img src="img/login.png" alt="Foto Ceibal Login">
+  <h4>Inicio de Sesión</h4>
+  <form class="formulario">
+    <label for="mail">Mail</label><br>
+    <input id="mail" placeholder="email" type="email"><br>
+    <label for="password">Password</label><br>
+    <input id="password" placeholder="password" type="password"><br>
+    <button id="boton" onclick="validar()"><a href="./index.html">Ingresar</a></button>
+  </form>
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
@@ -35,6 +40,7 @@
     </div>
   </footer>
   <script src="js/login.js"></script>
+  
 </body>
 
 </html>
