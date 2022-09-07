@@ -196,3 +196,9 @@ a.custom-card:hover {
   margin: 1rem auto 1rem;
   
 }
+/*Esta clase la cree para usar en js, hace que si no hay concordancia no me muestre los div*/
+.ocultar {
+  display: none;
+}
+
+

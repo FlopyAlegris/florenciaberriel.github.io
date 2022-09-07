@@ -1,7 +1,9 @@
 const CATEGORIES_URL = "https://japceibal.github.io/emercado-api/cats/cat.json";
 const PUBLISH_PRODUCT_URL = "https://japceibal.github.io/emercado-api/sell/publish.json";
-const PRODUCTS_URL = "https://japceibal.github.io/emercado-api/cats_products/";
-const PRODUCT_INFO_URL = "https://japceibal.github.io/emercado-api/products/";
+// Ent2 En la const PRODUCTS_URL coloque entre `` el url de la APIS de products y con un marcador ${} le agregue el valor dinamico del localStorage
+const PRODUCTS_URL = `https:japceibal.github.io/emercado-api/cats_products/${localStorage.getItem("catID")}.json`; 
+//Ent3 En la const PRODUCT_INFO_URL coloque entre `` el url de la APIS de products y con un marcador ${} le agregue el valor dinamico del localStorage
+const PRODUCT_INFO_URL = `https://japceibal.github.io/emercado-api/products/${localStorage.getItem("productID")}.json`;
 const PRODUCT_INFO_COMMENTS_URL = "https://japceibal.github.io/emercado-api/products_comments/";
 const CART_INFO_URL = "https://japceibal.github.io/emercado-api/user_cart/";
 const CART_BUY_URL = "https://japceibal.github.io/emercado-api/cart/buy.json";

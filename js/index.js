@@ -36,5 +36,6 @@ function validarUsuario() {
 }
 
 document.getElementById("muestra-usuario").innerHTML = localStorage.getItem("usuario"); 
-}//ENTREGA2 linea 34 selecciona con el getElement el elemento con id "muestra-usuario" y con el inner muestra el localStorage en pantalla(html)
+}//ENTREGA2 linea 38 selecciona con el getElement el elemento con id "muestra-usuario" y con el inner muestra el localStorage en pantalla(html)
+
 
