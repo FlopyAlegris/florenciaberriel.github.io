@@ -27,7 +27,7 @@ function validar() {
         }
 
 };
-//linea 18 agregada para que al log exitoso me guarde el utlimo logueado
+//linea 22 agregada para que al log exitoso me guarde el utlimo logueado
 
 
 
