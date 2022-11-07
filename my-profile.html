@@ -44,7 +44,21 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-          <li class="nav-item">
+
+
+          <!--ENTREGA 4-->
+          <li>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <p id="muestra-usuario"></p>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><button id="button1" class="dropdown-item">Mi Carrito</button></li>
+                <li><button id="button2" class="dropdown-item">Mi Perfil</button></li>
+                <li><button id="button3" class="dropdown-item">Cerrar Sesión</button></li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
@@ -52,9 +66,20 @@
   </nav>
   <main>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+
+      <h2 class="my-5">Perfil</h2><hr>
+      <form action="" id="formulario" class="needs-validation" novalidate>
+        <div class=" m-3">
+          <label for="first-name" class="form-control-label m-3"> Primer Nombre <input id="first-name" type="text" class="form-control" required></label>
+          <label for="second-name" class="form-control-label m-3"> Segundo Nombre <input id="second-name" type="text" class="form-control"></label><br>
+          <label for="first-surname" class="form-control-label m-3"> Primer Apellido <input id="first-surname" type="text" class="form-control" required></label>
+          <label for="second-surname" class="form-control-label m-3"> Segundo Apellido <input id="second-surname" type="text" class="form-control"></label><br>
+          <label for="email" class="form-control-label m-3"> Email <input id="email" type="text" class="form-control" required></label>
+          <label for="telefono" class="form-control-label m-3"> Telefono <input id="telefono" type="number" class="form-control"></label><br>
+          <button type="submit" class="btn btn-primary m-3"> Guardar Datos </button>
+        </div>
+          
+      </form>
     </div>
   </main>
   <footer class="text-muted">

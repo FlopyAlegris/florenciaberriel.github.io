@@ -142,4 +142,3 @@ document.addEventListener("DOMContentLoaded", function(e){
     });
 });
 
-document.querySelector("li>div").innerHTML = localStorage.getItem("usuario");

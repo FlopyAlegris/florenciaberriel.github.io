@@ -201,4 +201,73 @@ a.custom-card:hover {
   display: none;
 }
 
+/*Esta clase la cree en js para darsela a el div de las imagenes*/
+.imagenes {
+  display: flexbox;
+  flex-direction: row;
 
+}
+
+/*#carouselExampleIndicators {
+  width: 777px;
+}*/
+
+
+.grande {
+  width: 400%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateX(-25%);
+  transition: all 0.4s ease;
+
+}
+
+.carrusel {
+  width: 90%;
+  max-width: 120em;
+  padding: 2em;
+  overflow: hidden;
+  margin: auto auto;
+}
+
+.punto {
+  border: 1px solid black;
+  width: 2em;
+  height: 2em;
+  margin: 1em 1em 0;
+  border-radius: 1em;
+}
+
+.puntos {
+  list-style-type: none;
+  width: 75%;
+  margin: 1em auto 0;
+  padding: 0.4em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.activo {
+  background-color: lightslategray;
+
+}
+
+.carrusel .img {
+  width: calc(100% / 4 - 2em);
+  min-height: 10vh;
+
+}
+
+/*ENTREGA 6 Estilos de las validaciones*/
+
+calle:valid {
+  border: green solid 2px;
+}
+
+calle:invalid {
+  border: red solid 2px;
+}

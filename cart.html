@@ -29,18 +29,158 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-          <li class="nav-item">
-          </li>
+
+          <!--ENTREGA 4-->
+
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <p id="muestra-usuario"></p>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><button id="button1" class="dropdown-item">Mi Carrito</button></li>
+              <li><button id="button2" class="dropdown-item">Mi Perfil</button></li>
+              <li><button id="button3" class="dropdown-item">Cerrar Sesión</button></li>
+            </ul>
+          </div>
+
+
         </ul>
       </div>
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+
+    <div class="container m-5">
+
+      <!--ENTREGA 5 // 4.1-->
+      <div id="contenedor-carrito" class="" style="box-shadow: 0 5px 10px;border: 1px solid gray">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Costo</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Moneda</th>
+              <th scope="col">Subtotal</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <!--con un querySelector direcciono la info hacia este contenedor tbody-->
+          </tbody>
+        </table>
       </div>
+
+      <!--ENTREGA 5 // 4.2  FORMULARIO-->
+      <form action="" id="formulario" class="needs-validation" novalidate>
+        <div class="controles d-flex p-3 my-5" style="box-shadow: 0 5px 10px;border: 1px solid gray">
+          <div>
+            <h2>Tipo de Envio</h2>
+            <label class="form-check-label"><input required name="envio" type="radio" class="form-check-input radios" onchange="totalCarrito()"> Premium 2 a 5 dias
+              (15%)</label><br>
+            <label class="form-check-label"><input required name="envio" type="radio" class="form-check-input radios" onchange="totalCarrito()"> Express 5 a 8 dias
+              (7%)</label><br>
+            <label class="form-check-label"><input required name="envio" type="radio" class="form-check-input radios" onchange="totalCarrito()"> Standard 12 a 15 dias
+              (5%)</label><br>
+            <br>
+            <h2>Direccion de Envio</h2>
+            <div>
+              <label>Calle<br>
+                <input id="direccion" required name="calle" type="text" class="form-control">
+              </label><br>
+              <div class="invalid-feedback">ERROR !!</div>
+            </div>
+            <div>
+              <label>Numero<br>
+                <input id="num-direccion" required name="numero" type="number" min="1" class="form-control">
+              </label><br>
+              <div class="invalid-feedback">ERROR !!</div>
+            </div>
+            <div>
+              <label>Esquina<br>
+                <input id="esquina" required name="esquina" type="text" class="form-control">
+              </label><br>
+              <div class="invalid-feedback">ERROR !!</div>
+            </div>
+          </div>
+
+          <!--ENTREGA 6 // 6.1-->
+          <div class="w-75 p-2 m-5">
+            <h2>Costos:</h2>
+
+            <ul class="list-group">
+              <li class="d-flex justify-content-between list-group-item" style="list-style: none;">
+                <p>Subtotal<br><i>
+                    Costo unitario del producto por cantidad:</i></p>
+                <p id="p-subtotal" class="float-end"></p>
+              </li>
+              <li class="d-flex justify-content-between list-group-item" style="list-style: none;">
+                <p>Costo de Envio<br><i>
+                    Segun el tipo de envio:</i></p>
+                <p id="costo-de-envio" class="float-end"></p>
+              </li>
+              <li class="d-flex justify-content-between list-group-item" style="list-style: none;">
+                <p>Total</p>
+                <p id="total-con-envio" class="float-end"></p>
+              </li>
+            </ul>
+          </div>
+
+
+
+        </div>
+        <div>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Formas de Pago
+          </button>
+          <p id="mensaje"> Seleccione metodo de pago </p>
+          <p id="mensaje-de-alerta" class="d-none my-2"> Debe seleccionar una forma de pago </p>
+        </div>
+        <!-- Modal ENTREGA 6 6.3 utilizo requireds para que si no se completan los muestre en rojo-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel">FORMA DE PAGO</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <p id="mensaje-modal"></p>
+                <div id="tarjeta-de-credito">
+                  <label class="my-1"><input required id="tarj-credito" type="radio" name="radioo"
+                      onclick="metodoDePagoCredito()"> Tarjeta de Credito</label>
+                  <hr>
+                  <label class="my-1"> Numero de Tarjeta <input required class="form-control" name="tarjeta" id="numero-de-tarjeta" size="15"
+                      type="text"></label>
+                  <label class="my-1"> Codigo <input required class="form-control" name="cod" id="codigo" size="5" type="text"></label><br>
+                  <label class="my-1"> Vencimiento (MM/AA) <input required class="form-control" name="vencimiento" id="vto" size="5"
+                      type="text"></label>
+                  <hr>
+                </div>
+                <div id="transferencia-bancaria">
+                  <label class="my-1"><input required id="transf-bancaria" type="radio" name="radioo"
+                      onclick="pagoTransferencia()"> Transferencia Bancaria</label><br>
+                  <hr>
+                  <label class="my-1"> Numero de Cuenta <input required class="form-control" name="num-cuenta" id="n-de-cuenta" size="15"
+                      type="text"></label>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button onclick="mostrarAlertaModal()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div> <!--ENTREGA 6 // 6.3 boton para finalizar compra -->
+        <button id="compra" class="m-2 btn btn-success btn-sm" type="submit"> FINALIZAR COMPRA ! ! </button>
+      </form>
+
     </div>
+
   </main>
   <footer class="text-muted">
     <div class="container">
@@ -51,7 +191,9 @@
         2022</p>
       <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
     </div>
-  </footer>
+  </footer> <!--Alerta que me dice que la compra se ha realizado correctamente luego de verificado y-->
+  
+
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>

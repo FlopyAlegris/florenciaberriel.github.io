@@ -37,11 +37,13 @@ function sortCategories(criteria, array){ // .cost para que ordene asc y desc en
     return result;
 }
 
-//Ent3 Tome la funcion de categories de setCatID y la modifique con product para que tome el valor guardado del id del json product-info
+//Entrega3 3.1 Tome la funcion de categories de setCatID y la modifique con product para que tome el valor guardado del id al hacer click y nos redirige a product-info
 function setProductID(id) {
     localStorage.setItem("productID", id);
     window.location = "product-info.html"
 }
+
+
 
 
 //me muestra todos los productos
@@ -197,5 +199,5 @@ buscar.addEventListener('keyup', (e)=>{
 
 /*RegExp*/ //para hacer que texto se vuelva patron (expresion regular)
 
-document.querySelector("li>div").innerHTML = localStorage.getItem("usuario");    
+document.getElementById("muestra-usuario").innerHTML = localStorage.getItem("usuario");    
 

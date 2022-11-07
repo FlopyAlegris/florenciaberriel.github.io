@@ -32,12 +32,22 @@
           </li>
           <li class="nav-item">
 
+            <!--ENTREGA 4 // Con la clase dropdown coloque un boton desplegable con maas cosas. Funcionalidades en JS -->
+
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <p id="muestra-usuario"></p>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><button id="button1" class="dropdown-item">Mi Carrito</button></li> 
+                <li><button id="button2" class="dropdown-item">Mi Perfil</button></li>
+                <li><button id="button3" class="dropdown-item">Cerrar Sesión</button></li>
+              </ul>
+            </div>
+
             <div class="nav-link"></div> <!--Este div creado para mostrar usuario con el estilo del nav-link-->
           </li>
-          <li class="nav-item"> 
-              
-            <a class="nav-link" href="login.html" onclick="desconectarse()">Desconectarse</a>
-          </li>
+        
         </ul>
       </div>
     </div>
@@ -91,6 +101,7 @@
           </div>
         </div>
       </div>
+
     <div id="cat-list-container">
     </div>
   </main>

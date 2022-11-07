@@ -1,8 +1,6 @@
 //ENTREGA 5 // 4.1
 const URL_CART = "https://japceibal.github.io/emercado-api/user_cart/25801.json";
-
 //ENTREGA 6
-
 const metodoDeEnvio = document.getElementsByClassName('radios');
 const costoDeEnvio = document.getElementById('costo-de-envio');
 const totalConEnvio = document.getElementById('total-con-envio')
@@ -17,7 +15,7 @@ const direccion = document.getElementById('direccion');
 const numero = document.getElementById('num-direccion');
 const esquina = document.getElementById('esquina');
 
-
+//const mensaje = document.getElementById('mensaje');
 const alerta = document.querySelector('.alert-sucess')
 const alertaModal = document.getElementById('mensaje-de-alerta')
 const mensajeModal = document.getElementById('mensaje');
@@ -31,9 +29,10 @@ const mensajeModal = document.getElementById('mensaje');
 
 let precioUnitario = 0
 let subtotal = 0
+//ENTREGA 6 VALIDACIONES
 
 
-//ENTREGA 6 6.1 actualiza valores en tiempo real tipo de envios y carrito
+
 
 
 function verificarRadio() {
@@ -59,6 +58,8 @@ function subTotal() {
 }
 
 
+
+
 function totalCarrito() {
     verificarRadio()
 
@@ -80,9 +81,7 @@ function totalCarrito() {
     };
 }
 
-//ENTREGA 6 // 6.2 formas de pago modal, funciones de los metodos de pago usados en radios de modal
 
-//desactivacion de los campos de la opcion no seleccionada
 function metodoDePagoCredito() {
     if (formaDePagoCredito.checked) {
         transfBancaria.disabled = true
@@ -103,13 +102,15 @@ function pagoTransferencia() {
     }
 }
 
-//Esta es la validacion que realiza Boostrap y que impide que el formulario se envie sin estar antes validado
+
+// Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
     'use strict'
-    
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
     var forms = document.querySelectorAll('.needs-validation')
 
-    
+    // Loop over them and prevent submission
     Array.prototype.slice.call(forms)
         .forEach(function (form) {
             form.addEventListener('submit', function (event) {
@@ -117,8 +118,8 @@ function pagoTransferencia() {
                     event.preventDefault()
                     event.stopPropagation()
                     
-                } else if (form.checkValidity()) {
-                    alert('La compra ha sido un EXITO !!')
+                } else if (document.querySelector('.was-validated')) {
+                    compraExitosa()
                     }
                     
                     mostrarAlertaModal()
@@ -129,7 +130,6 @@ function pagoTransferencia() {
         })
 })()
 
-// 6.3 seleccionar forma de pago feedback
 function mostrarAlertaModal() {
         if(mensajeModal.innerHTML == ' Seleccione metodo de pago ') {
         alertaModal.classList.replace('d-none','text-danger')
@@ -138,11 +138,30 @@ function mostrarAlertaModal() {
     }
 }
 
-
-//function compraExitosa(){
-    //document.querySelector('.alert-success').classList.replace('d-none', 'show');
     
-//}
+    
+
+
+function compraExitosa(){
+    document.querySelector('.alert-success').classList.replace('d-none', 'show');
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -181,7 +200,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 });
-
-
-
-

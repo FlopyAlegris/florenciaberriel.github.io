@@ -32,21 +32,78 @@
           </li>
           <li class="nav-item">
 
+<!--ENTREGA 4 / 4.2 dropdown. Agregue esta clase de boton en todos los html para que se despliegue en todos-->
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    <p id="muestra-usuario"></p>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><button id="button1" class="dropdown-item">Mi Carrito</button></li> 
+    <li><button id="button2" class="dropdown-item">Mi Perfil</button></li>
+    <li><button id="button3" class="dropdown-item">Cerrar Sesión</button></li>
+  </ul>
+</div>
+
             <div class="nav-link"></div> <!--Este div creado para mostrar usuario con el estilo del nav-link-->
-          </li>
-          <li class="nav-item"> 
-              
-            <a class="nav-link" href="login.html" onclick="desconectarse()">Desconectarse</a>
+          
+            
           </li>
         </ul>
       </div>
     </div>
-  </nav>
-  <!--Entrega3 product-container -->
-<div class="m-5" id="product-container">
 
-</div>
-  <footer class="text-muted">
+  </nav>
+  
+  <!--Entrega3 product-container -->
+  <div class="m-5">
+    <div class="m-5" id="product-container">
+      
+    </div>
+    <div class="m-5" id="imagenes">
+      
+
+      <!--Entrega 4 DESAFIATE CARRUSEL-->
+      
+      <div class="carrusel">
+        <div class="grande">
+
+        </div>
+        <ul class="puntos">
+          <li class="punto"></li>
+          <li class="punto"></li>
+          <li class="punto"></li>
+          <li class="punto"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="m-5" id= "comentarios"></div>
+      
+    <!-- ENTREGA 4 / 4.1 div -->
+    <div id="producto-relacionado" class="m-5"></div> 
+    
+
+  
+
+    <!--creamos un form para hacer el formulario-->
+    <form class="m-5" action="" id="formulario"> 
+    
+      <p>
+        <input type="radio"  name="puntuar" value="1" id="est1">1
+        <input type="radio"  name="puntuar" value="2" id="est2">2
+        <input type="radio"  name="puntuar" value="3" id="est3">3
+        <input type="radio"  name="puntuar" value="4" id="est4">4
+        <input type="radio"  name="puntuar" value="5" id="est5">5
+        
+      </p>  
+      <textarea id="textarea" cals="50" name="coment" placeholder="comentario"></textarea>
+      <input type="submit" value="comentar">
+    
+    </form>
+  </div>
+
+  
+  
+<footer class="text-muted">
     <div class="container">
       <p class="float-end">
         <a href="#">Volver arriba</a>
